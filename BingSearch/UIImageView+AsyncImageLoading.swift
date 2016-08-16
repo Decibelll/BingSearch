@@ -23,6 +23,7 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
+                        strongSelf.contentMode = .Center
                         strongSelf.image = placeholderImage
                         completion?()
                     }
@@ -35,6 +36,7 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
+                        strongSelf.contentMode = .Center
                         strongSelf.image = placeholderImage
                         completion?()
                     }
@@ -47,6 +49,7 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
+                        strongSelf.contentMode = .ScaleAspectFill
                         strongSelf.image = image
                         completion?()
                     }
@@ -57,6 +60,7 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
+                        strongSelf.contentMode = .Center
                         strongSelf.image = placeholderImage
                         completion?()
                     }
