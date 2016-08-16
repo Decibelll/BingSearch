@@ -26,6 +26,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     private var searchResultsCount: Int64?
     private var canDoNextSearch = false
     private var trackingKeyboardHeight = false
+    private var footerSpinners = [UIActivityIndicatorView]()
     
     deinit
     {
@@ -74,6 +75,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     func updateInterfaceWithSearchResult(foundItems: [ResultModel], searchCount: Int64?, errorDescription: String?)
     {
         searching = false
+        searchTableView.sectionFooterHeight = 0
         if let error = errorDescription
         {
             if newSearch
@@ -111,8 +113,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         }
         else
         {
+            
+            let numberOfResults = searchResults.count
             searchResults += foundItems
-            searchTableView.reloadData()
+            var newIndexPaths = [NSIndexPath]()
+            for i in numberOfResults ..< searchResults.count
+            {
+                newIndexPaths.append(NSIndexPath(forRow: i, inSection: 0))
+            }
+            let footer = tableView(searchTableView, viewForFooterInSection: 0)
+            footer?.setNeedsDisplay()
+            searchTableView.beginUpdates()
+            searchTableView.insertRowsAtIndexPaths(newIndexPaths, withRowAnimation: .Automatic)
+            searchTableView.endUpdates()
         }
         
         if shouldSearchImages() && foundItems.count == 28
@@ -161,6 +174,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             searchTableView.hidden = false
             infoLabel.hidden = true
             searchResultsCount = nil
+            searchTableView.sectionFooterHeight = 44
             searchAgent.search(textToSearch, searchImages: shouldSearchImages(), firstItemNumber: 1)
         }
     }
@@ -171,6 +185,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         {
             searching = true
             newSearch = false
+            searchTableView.sectionFooterHeight = 44
             searchAgent.search(searchText, searchImages: shouldSearchImages(), firstItemNumber: searchResults.count + 1)
             dispatch_async(dispatch_get_main_queue()) {
                 self.searchTableView.reloadData()
@@ -242,9 +257,18 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
     {
-        guard searching else {return nil}
+        guard searching else
+        {
+            for spinner in footerSpinners
+            {
+                spinner.stopAnimating()
+            }
+            footerSpinners = [UIActivityIndicatorView]()
+            return nil
+        }
         let container = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
         let spinner = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        footerSpinners.append(spinner)
         spinner.center = CGPoint(x: container.frame.width / 2, y: container.frame.height / 2)
         container.addSubview(spinner)
         spinner.startAnimating()
