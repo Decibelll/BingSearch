@@ -14,6 +14,8 @@ extension UIImageView
     func loadImageFromURL(url: NSURL, completion: (()->())? = nil)
     {
         let placeholderImage = UIImage(named: "preview_icon")
+        contentMode = .Center
+        image = placeholderImage
         let timestamp = NSDate.timeIntervalSinceReferenceDate()
         RequestTimeStampsManager.sharedInstance[self] = timestamp
         let currentSessionTask = NSURLSession.sharedSession().dataTaskWithURL(url) {[weak self](data, response, error) in
@@ -23,8 +25,6 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
-                        strongSelf.contentMode = .Center
-                        strongSelf.image = placeholderImage
                         completion?()
                     }
                 }
@@ -36,8 +36,6 @@ extension UIImageView
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
                     dispatch_async(dispatch_get_main_queue()) {
-                        strongSelf.contentMode = .Center
-                        strongSelf.image = placeholderImage
                         completion?()
                     }
                 }
@@ -59,9 +57,7 @@ extension UIImageView
             {
                 if RequestTimeStampsManager.sharedInstance.isRequestStillValid(strongSelf, timestamp: timestamp)
                 {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        strongSelf.contentMode = .Center
-                        strongSelf.image = placeholderImage
+                    dispatch_async(dispatch_get_main_queue()) {                        
                         completion?()
                     }
                 }
