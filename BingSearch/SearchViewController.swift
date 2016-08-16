@@ -35,8 +35,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 44, right: 0)
-        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: 64, left: 0, bottom: 44, right: 0)
+        searchTableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
+        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
         
         let searchCallback: SearchCallback = {[weak self](items, searchCount, errorInfo) in
             guard let strongSelf = self else {return}
@@ -55,6 +55,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SearchViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation)
+    {
+        searchTableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
+        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "OpenDetailController"
@@ -70,12 +76,21 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         searching = false
         if let error = errorDescription
         {
-            searchResults = []
-            infoLabel.text = error
-            infoLabel.hidden = false
-            searchTableView.hidden = true
-            currentSearchPhrase = nil
-            return
+            if newSearch
+            {
+                searchResults = []
+                infoLabel.text = error
+                infoLabel.hidden = false
+                searchTableView.hidden = true
+                currentSearchPhrase = nil
+                return
+            }
+            else
+            {
+                canDoNextSearch = false
+                searchTableView.reloadData()
+                return
+            }
         }
         
         if newSearch
@@ -290,16 +305,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 return
             }
             
-            searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: finalRect.height, right: 0)
-            searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: 64, left: 0, bottom: finalRect.height, right: 0)
+            searchTableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: finalRect.height, right: 0)
+            searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: finalRect.height, right: 0)
             trackingKeyboardHeight = true
         }
     }
     
     func keyboardWillHide(notification: NSNotification)
     {
-        searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 44, right: 0)
-        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: 64, left: 0, bottom: 44, right: 0)
+        searchTableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
+        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: 44, right: 0)
         trackingKeyboardHeight = false
     }
     
@@ -308,8 +323,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         if trackingKeyboardHeight
         {
             guard let finalRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() else {return}
-            searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: finalRect.height, right: 0)
-            searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: 64, left: 0, bottom: finalRect.height, right: 0)
+            searchTableView.contentInset = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: finalRect.height, right: 0)
+            searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: finalRect.height, right: 0)
         }
     }
 }
