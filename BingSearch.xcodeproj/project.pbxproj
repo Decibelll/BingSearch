@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A507F9141D62600D001C14ED /* ImageSearchResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A507F9131D62600D001C14ED /* ImageSearchResultTableCell.swift */; };
+		A507F9161D6307F1001C14ED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A507F9151D6307F1001C14ED /* DetailViewController.swift */; };
+		A52C25351D5E60120005F034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C25341D5E60120005F034 /* AppDelegate.swift */; };
+		A52C25371D5E60120005F034 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C25361D5E60120005F034 /* SearchViewController.swift */; };
+		A52C253A1D5E60120005F034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52C25381D5E60120005F034 /* Main.storyboard */; };
+		A52C253C1D5E60120005F034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52C253B1D5E60120005F034 /* Assets.xcassets */; };
+		A52C253F1D5E60120005F034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52C253D1D5E60120005F034 /* LaunchScreen.storyboard */; };
+		A547D5F31D6113FF009359A6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A547D5EE1D6113FF009359A6 /* TFHpple.m */; };
+		A547D5F41D6113FF009359A6 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A547D5F01D6113FF009359A6 /* TFHppleElement.m */; };
+		A547D5F51D6113FF009359A6 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A547D5F21D6113FF009359A6 /* XPathQuery.m */; };
+		A547D5FB1D61A93F009359A6 /* BingSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547D5FA1D61A93F009359A6 /* BingSearch.swift */; };
+		A547D61D1D623863009359A6 /* UIImageView+AsyncImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547D61C1D623863009359A6 /* UIImageView+AsyncImageLoading.swift */; };
+		A54E37101D62561200E6C16A /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A54E370F1D62561200E6C16A /* libxml2.2.tbd */; };
+		A5C0B0BD1D60B61A005B46A7 /* ImageSearchParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0B0BC1D60B61A005B46A7 /* ImageSearchParser.swift */; };
+		A5FA18A81D5F814A004724C9 /* StringSearchParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA18A71D5F814A004724C9 /* StringSearchParser.swift */; };
+		A5FA18AA1D5FB51A004724C9 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA18A91D5FB51A004724C9 /* ResultModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A507F9131D62600D001C14ED /* ImageSearchResultTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchResultTableCell.swift; sourceTree = "<group>"; };
+		A507F9151D6307F1001C14ED /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A52C25311D5E60120005F034 /* BingSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52C25341D5E60120005F034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A52C25361D5E60120005F034 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A52C25391D5E60120005F034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A52C253B1D5E60120005F034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A52C253E1D5E60120005F034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A52C25401D5E60120005F034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A547D5EC1D6113FF009359A6 /* BingSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BingSearch-Bridging-Header.h"; sourceTree = "<group>"; };
+		A547D5ED1D6113FF009359A6 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		A547D5EE1D6113FF009359A6 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		A547D5EF1D6113FF009359A6 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		A547D5F01D6113FF009359A6 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		A547D5F11D6113FF009359A6 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		A547D5F21D6113FF009359A6 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		A547D5FA1D61A93F009359A6 /* BingSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingSearch.swift; sourceTree = "<group>"; };
+		A547D61C1D623863009359A6 /* UIImageView+AsyncImageLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncImageLoading.swift"; sourceTree = "<group>"; };
+		A54E370F1D62561200E6C16A /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		A5C0B0BC1D60B61A005B46A7 /* ImageSearchParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchParser.swift; sourceTree = "<group>"; };
+		A5FA18A71D5F814A004724C9 /* StringSearchParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSearchParser.swift; sourceTree = "<group>"; };
+		A5FA18A91D5FB51A004724C9 /* ResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A52C252E1D5E60120005F034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54E37101D62561200E6C16A /* libxml2.2.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A52C25281D5E60120005F034 = {
+			isa = PBXGroup;
+			children = (
+				A52C25331D5E60120005F034 /* BingSearch */,
+				A54E37121D62563600E6C16A /* Frameworks */,
+				A52C25321D5E60120005F034 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A52C25321D5E60120005F034 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A52C25311D5E60120005F034 /* BingSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A52C25331D5E60120005F034 /* BingSearch */ = {
+			isa = PBXGroup;
+			children = (
+				A547D5FC1D622435009359A6 /* Views */,
+				A5FA18A61D5F8123004724C9 /* API */,
+				A5FA18A51D5F8116004724C9 /* Models */,
+				A5FA18A31D5F80EF004724C9 /* ViewControllers */,
+				A52C25341D5E60120005F034 /* AppDelegate.swift */,
+				A52C25401D5E60120005F034 /* Info.plist */,
+				A5FA18A41D5F8100004724C9 /* Resources */,
+			);
+			path = BingSearch;
+			sourceTree = "<group>";
+		};
+		A547D5FC1D622435009359A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A547D61C1D623863009359A6 /* UIImageView+AsyncImageLoading.swift */,
+				A507F9131D62600D001C14ED /* ImageSearchResultTableCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A54E37121D62563600E6C16A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A54E370F1D62561200E6C16A /* libxml2.2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5FA18A31D5F80EF004724C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A52C25361D5E60120005F034 /* SearchViewController.swift */,
+				A507F9151D6307F1001C14ED /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A5FA18A41D5F8100004724C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A52C25381D5E60120005F034 /* Main.storyboard */,
+				A52C253B1D5E60120005F034 /* Assets.xcassets */,
+				A52C253D1D5E60120005F034 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A5FA18A51D5F8116004724C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA18A91D5FB51A004724C9 /* ResultModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A5FA18A61D5F8123004724C9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A547D5ED1D6113FF009359A6 /* TFHpple.h */,
+				A547D5EE1D6113FF009359A6 /* TFHpple.m */,
+				A547D5EF1D6113FF009359A6 /* TFHppleElement.h */,
+				A547D5F01D6113FF009359A6 /* TFHppleElement.m */,
+				A547D5F11D6113FF009359A6 /* XPathQuery.h */,
+				A547D5F21D6113FF009359A6 /* XPathQuery.m */,
+				A5FA18A71D5F814A004724C9 /* StringSearchParser.swift */,
+				A5C0B0BC1D60B61A005B46A7 /* ImageSearchParser.swift */,
+				A547D5EC1D6113FF009359A6 /* BingSearch-Bridging-Header.h */,
+				A547D5FA1D61A93F009359A6 /* BingSearch.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A52C25301D5E60120005F034 /* BingSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A52C25431D5E60120005F034 /* Build configuration list for PBXNativeTarget "BingSearch" */;
+			buildPhases = (
+				A52C252D1D5E60120005F034 /* Sources */,
+				A52C252E1D5E60120005F034 /* Frameworks */,
+				A52C252F1D5E60120005F034 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BingSearch;
+			productName = BingSearch;
+			productReference = A52C25311D5E60120005F034 /* BingSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A52C25291D5E60120005F034 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = sergeynesteruk;
+				TargetAttributes = {
+					A52C25301D5E60120005F034 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A52C252C1D5E60120005F034 /* Build configuration list for PBXProject "BingSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A52C25281D5E60120005F034;
+			productRefGroup = A52C25321D5E60120005F034 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A52C25301D5E60120005F034 /* BingSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A52C252F1D5E60120005F034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52C253F1D5E60120005F034 /* LaunchScreen.storyboard in Resources */,
+				A52C253C1D5E60120005F034 /* Assets.xcassets in Resources */,
+				A52C253A1D5E60120005F034 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A52C252D1D5E60120005F034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FA18AA1D5FB51A004724C9 /* ResultModel.swift in Sources */,
+				A547D5F41D6113FF009359A6 /* TFHppleElement.m in Sources */,
+				A507F9141D62600D001C14ED /* ImageSearchResultTableCell.swift in Sources */,
+				A507F9161D6307F1001C14ED /* DetailViewController.swift in Sources */,
+				A547D5F51D6113FF009359A6 /* XPathQuery.m in Sources */,
+				A547D5F31D6113FF009359A6 /* TFHpple.m in Sources */,
+				A52C25371D5E60120005F034 /* SearchViewController.swift in Sources */,
+				A52C25351D5E60120005F034 /* AppDelegate.swift in Sources */,
+				A5FA18A81D5F814A004724C9 /* StringSearchParser.swift in Sources */,
+				A547D5FB1D61A93F009359A6 /* BingSearch.swift in Sources */,
+				A547D61D1D623863009359A6 /* UIImageView+AsyncImageLoading.swift in Sources */,
+				A5C0B0BD1D60B61A005B46A7 /* ImageSearchParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A52C25381D5E60120005F034 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A52C25391D5E60120005F034 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A52C253D1D5E60120005F034 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A52C253E1D5E60120005F034 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A52C25411D5E60120005F034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A52C25421D5E60120005F034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A52C25441D5E60120005F034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
+				INFOPLIST_FILE = BingSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.di.testApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BingSearch/BingSearch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A52C25451D5E60120005F034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
+				INFOPLIST_FILE = BingSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.di.testApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BingSearch/BingSearch-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A52C252C1D5E60120005F034 /* Build configuration list for PBXProject "BingSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A52C25411D5E60120005F034 /* Debug */,
+				A52C25421D5E60120005F034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A52C25431D5E60120005F034 /* Build configuration list for PBXNativeTarget "BingSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A52C25441D5E60120005F034 /* Debug */,
+				A52C25451D5E60120005F034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A52C25291D5E60120005F034 /* Project object */;
+}
